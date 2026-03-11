@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Canvas: 108x108dp  — safe zone: 18dp margin on each side (inner 72x72)
+    "V" path: Montserrat Medium proportions, centered in safe zone
+    Arms: 13dp wide at top, tapering to a sharp tip at bottom center
+    Bounds: x 26–82, y 27–83 (within the 72x72 safe area)
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="
+            M26,27
+            L54,83
+            L82,27
+            L69,27
+            L54,58
+            L39,27
+            Z" />
+</vector>

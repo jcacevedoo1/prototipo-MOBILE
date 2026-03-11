@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Canvas 108x108. Fondo verde (#11BC55) de borde a borde, con esquinas redondeadas.
+    Sin márgenes blancos — color uniforme.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#11BC55"
+        android:pathData="M0,24 
+            a24,24 0 0 1 24,-24 h60 
+            a24,24 0 0 1 24,24 v60 
+            a24,24 0 0 1 -24,24 h-60 
+            a24,24 0 0 1 -24,-24 z" />
+</vector>
