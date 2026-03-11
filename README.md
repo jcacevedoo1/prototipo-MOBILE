@@ -53,8 +53,82 @@ Pantalla para grabar una nota de voz. Presenta una visualización de forma de on
 
 ---
 
+## Requisitos
+
+- Android **14 o superior** (API level 35+)
+- Dispositivo físico o emulador Android
+
+---
+
+## Instalación del APK
+
+### Opción A — Instalar directamente en el dispositivo
+
+1. **Transferir el APK** al dispositivo (por cable USB, Google Drive, WhatsApp, etc.).
+2. Abrir el APK desde el explorador de archivos del dispositivo.
+3. Si aparece el mensaje *"Instalar aplicaciones de fuentes desconocidas"*, ir a:
+   > Ajustes → Seguridad → Instalar aplicaciones desconocidas → Activar para el explorador de archivos
+4. Pulsar **Instalar** y esperar a que finalice.
+5. Abrir **VetCue** desde el menú de aplicaciones.
+
+### Opción B — Instalar con ADB (Android Debug Bridge)
+
+Requiere tener [Android Studio](https://developer.android.com/studio) o las Platform Tools instaladas y la **depuración USB** activada en el dispositivo.
+
+```bash
+# Verificar que el dispositivo está conectado
+adb devices
+
+# Instalar el APK
+adb install ruta/al/archivo/vetcue.apk
+```
+
+---
+
+## Compilar desde el código fuente
+
+### Prerrequisitos
+
+| Herramienta | Versión recomendada |
+|---|---|
+| Android Studio | Ladybug (2024.2) o superior |
+| JDK | 11 |
+| Gradle | 8.x (incluido en el proyecto) |
+| compileSdk / targetSdk | 36 |
+| minSdk | 35 |
+
+### Pasos
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/jcacevedoo1/prototipo-MOBILE.git
+cd prototipo-MOBILE
+
+# 2. Abrir en Android Studio
+#    File → Open → seleccionar la carpeta del proyecto
+
+# 3. Sincronizar dependencias (Gradle sync automático al abrir)
+
+# 4. Generar el APK de debug
+./gradlew assembleDebug
+
+# El APK se genera en:
+# app/build/outputs/apk/debug/app-debug.apk
+```
+
+Para generar el APK de **release**:
+
+```bash
+./gradlew assembleRelease
+# Resultado: app/build/outputs/apk/release/app-release-unsigned.apk
+```
+
+---
+
 ## Tecnologías
 
 - **Lenguaje:** Kotlin
 - **UI:** Jetpack Compose
-- **Plataforma:** Android
+- **Plataforma:** Android (API 35+)
+- **Navegación:** Jetpack Navigation Compose
+- **Build:** Gradle con Kotlin DSL
